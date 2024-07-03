@@ -3,6 +3,19 @@
 <body>
 
 <h1>This is the retailer's analytics page</h1>
+<h2>Analytics conversion completed at: <span id="analyticsTime"><span></h2>
+
+<script>
+// get a new date (locale machine date time)
+var date = new Date();
+// get the date as a string
+var n = date.toDateString();
+// get the time as a string
+var time = date.toLocaleTimeString();
+// log the time in the browser console#
+document.getElementById("analyticsTime").textContent = (time);
+</script>
+
 
 </body>
 </html>
