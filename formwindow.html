@@ -7,12 +7,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 </head>
 <body>
-
-<form target='_blank' action='https://www.google.com/search'>
+<script>
+function markSignedComplete() {
+document.forms[0].target = "_blank";
+var button = document.getElementById("nav-next");
+button.click();
+window.location.href = ('https://v12joe.github.io/analytics/analytics.html');
+}
+</script>
+  
+<form action='https://www.google.com/search'>
   <label for="fname">Search google for: </label><br>
   <input type="text" id="q" name="q" value="Weather"><br>
-  <input type="submit" value="Submit">
+  <input type="submit" id="nav-next" value="Search in this window">
 </form>
 
+<p><button onclick="return markSignedComplete();">Search in new window</button></p>
+
+
+
+
+  
 </body>
 </html>
