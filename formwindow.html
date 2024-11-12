@@ -9,20 +9,19 @@
 <body>
 <script>
 function markSignedComplete() {
-document.forms[0].target = "_blank";
 var button = document.getElementById("nav-next");
 button.click();
 window.location.href = ('https://v12joe.github.io/analytics/analytics.html');
 }
 </script>
   
-<form action='https://www.google.com/search'>
+<form action='https://www.google.com/search' target="_blank">
   <label for="fname">Search google for: </label><br>
   <input type="text" id="q" name="q" value="Weather"><br>
-  <input type="submit" id="nav-next" value="Search in this window">
+  <input type="submit" id="nav-next" value="Search without analytics">
 </form>
 
-<p><button onclick="return markSignedComplete();">Search in new window</button></p>
+<p><button onclick="return markSignedComplete();">Search with analytics</button></p>
 
 
 
