@@ -13,9 +13,7 @@ function markSignedComplete() {
     document.forms[0].target = "_blank";
     var button = document.getElementById("nav-next");
     button.click();
-    // Assuming the click triggers some asynchronous operation
-    // You might need to adjust this part based on your actual use case
-    //setTimeout(resolve, 1000); // Simulating async operation with a timeout
+    setTimeout(resolve, 5000); // Simulating async operation with a timeout
   });
 }
 
