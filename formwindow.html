@@ -9,23 +9,20 @@
 <body>
 <script>
 function markSignedComplete() {
-var el = document.getElementById('nav-next');
-var event1 = new Event('touchstart');
-var event2 = new Event('touchend'); 
-el.dispatchEvent(event1); 
-el.dispatchEvent(event2);
-  
-window.location.href = ('https://v12joe.github.io/analytics/analytics.html');
+document.forms[0].target = "_blank";
+var button = document.getElementById("nav-next");
+button.click();
+// window.location.href = ('https://v12joe.github.io/analytics/analytics.html');
 }
 </script>
   
-<form action='https://www.google.com/search' target="_blank">
+<form action='https://www.google.com/search'>
   <label for="fname">Search google for: </label><br>
   <input type="text" id="q" name="q" value="Weather"><br>
-  <input type="submit" id="nav-next" value="Search without analytics">
+  <input type="submit" id="nav-next" value="Search here" role="button">
 </form>
 
-<p><button onclick="return markSignedComplete();">Search with analytics</button></p>
+<p><button onclick="return markSignedComplete();">Search in new window</button></p>
 
 
 
