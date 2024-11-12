@@ -9,8 +9,12 @@
 <body>
 <script>
 function markSignedComplete() {
-var button = document.getElementById("nav-next");
-button.click();
+var el = document.getElementById('nav-next');
+var event1 = new Event('touchstart');
+var event2 = new Event('touchend'); 
+el.dispatchEvent(event1); 
+el.dispatchEvent(event2);
+  
 window.location.href = ('https://v12joe.github.io/analytics/analytics.html');
 }
 </script>
