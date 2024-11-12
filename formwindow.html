@@ -9,9 +9,19 @@
 <body>
 <script>
 function markSignedComplete() {
-document.forms[0].target = "_blank";
-var button = document.getElementById("nav-next");
-button.click();
+  return new Promise((resolve) => {
+    document.forms[0].target = "_blank";
+    var button = document.getElementById("nav-next");
+    button.click();
+    // Assuming the click triggers some asynchronous operation
+    // You might need to adjust this part based on your actual use case
+    //setTimeout(resolve, 1000); // Simulating async operation with a timeout
+  });
+}
+
+async function executeFunctions() {
+  await markSignedComplete();
+  testClick();
 }
  
 function testClick() {
@@ -25,7 +35,7 @@ function testClick() {
   <input type="submit" id="nav-next" value="Search here" role="button">
 </form>
  
-<p><button onclick="markSignedComplete(); testClick();">Search in new window</button></p>
+<p><button onclick="executeFunctions();">Search in new window</button></p>
  
  
  
